@@ -8,7 +8,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Tree', '0002_user_delete_worker'),
+        ('tree', '0002_user_delete_worker'),
     ]
 
     operations = [
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('reg_date', models.DateField(auto_now_add=True)),
-                ('user_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Tree.user')),
+                ('user_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tree.user')),
             ],
         ),
         migrations.CreateModel(
@@ -42,9 +42,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('book_quantity', models.IntegerField(validators=[django.core.validators.MinValueValidator(1, message='book_quantity can not be less than 1')])),
-                ('book_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Tree.book')),
-                ('order_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Tree.order')),
-                ('shop_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Tree.shop')),
+                ('book_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tree.book')),
+                ('order_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tree.order')),
+                ('shop_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tree.shop')),
             ],
         ),
     ]

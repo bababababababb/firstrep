@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'Tree.apps.TreeConfig'
+    'tree'
 ]
 
 MIDDLEWARE = [

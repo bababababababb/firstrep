@@ -7,28 +7,28 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Tree', '0003_book_order_shop_orderitem'),
+        ('tree', '0003_book_order_shop_orderitem'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='order',
             name='user_id',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Tree.user'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='tree.user'),
         ),
         migrations.AlterField(
             model_name='orderitem',
             name='book_id',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Tree.book'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='tree.book'),
         ),
         migrations.AlterField(
             model_name='orderitem',
             name='order_id',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Tree.order'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='tree.order'),
         ),
         migrations.AlterField(
             model_name='orderitem',
             name='shop_id',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Tree.shop'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='tree.shop'),
         ),
     ]

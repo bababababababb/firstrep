@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from Tree.models import User, Book, Shop, Order, OrderItem
+from tree.models import User, Book, Shop, Order, OrderItem
 
 
 class Command(BaseCommand):
