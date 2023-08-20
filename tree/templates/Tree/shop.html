@@ -1,5 +1,11 @@
 {% extends 'Tree/base.html' %}
 
 {% block content %}
-<h1> {{ users[0].first_name }} </h1>
+
+{% for user in users %}
+
+<h1> {{ user.email }} </h1>
+
+{% endfor %}
+
 {% endblock %}

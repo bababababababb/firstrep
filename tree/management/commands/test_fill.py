@@ -27,10 +27,10 @@ class Command(BaseCommand):
         OrderItem.objects.bulk_create(orderitems)
 
         for order in Order.objects.all():
-            order.user_id = User.objects.all().order_by('?')[0]
+            order.user_id = User.objects.all().order_by('?')[0].pk
             order.save()
         for order_item in OrderItem.objects.all():
-            order_item.order_id = Order.objects.all().order_by('?')[0]
-            order_item.shop_id = Shop.objects.all().order_by('?')[0]
-            order_item.book_id = Book.objects.all().order_by('?')[0]
+            order_item.order_id = Order.objects.all().order_by('?')[0].pk
+            order_item.shop_id = Shop.objects.all().order_by('?')[0].pk
+            order_item.book_id = Book.objects.all().order_by('?')[0].pk
             order_item.save()
